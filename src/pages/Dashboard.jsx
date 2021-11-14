@@ -7,14 +7,14 @@ export default function Dashboard() {
   // console.log(buttonMenu);
 
   return (
-    <div className="bg-gray-200 relative min-h-screen flex">
+    <div className="bg-gray-200 relative overflow-auto min-h-screen flex">
       {/* sidebar */}
       {/* when sidebar closed  */}
       <div
         className={`${
           buttonMenu
-            ? "sidebar relative inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out bg-gray-600 text-gray-100 w-12 space-y-6 pt-5"
-            : "sidebar absolute inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out bg-gray-600 text-gray-100 w-12 space-y-6 pt-5"
+            ? "sidebar relative inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out bg-gray-600 text-gray-100 w-14 space-y-6 pt-5"
+            : "sidebar absolute inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out bg-gray-600 text-gray-100 w-14 space-y-6 pt-5"
         }`}
       >
         {/* Logo  */}
@@ -37,12 +37,17 @@ export default function Dashboard() {
           <span className="text-2xl flex justify-center items-center font-extrabold"></span>
         </Link>
         {/* User Login */}
+        
+
         <div className="text-white py-2 border-t border-b border-gray-200 flex justify-center">
-          <img
-            className="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0 border-2 border-gray-50"
-            src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png"
-            alt=""
-          />
+          <button class="btn btn-sm h-12 flex justify-center items-center">
+            <img
+              className="w-4 h-4 bg-gray-300 rounded-full flex-shrink-0 border-2 border-gray-50"
+              src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png"
+              alt=""
+            />
+            
+          </button>
         </div>
 
         {/* Menu SideBar  */}
@@ -66,7 +71,7 @@ export default function Dashboard() {
             </button>
           </div>
           <Link
-            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-400 hover:text-gray-800"
+            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-300 hover:text-gray-800"
             to="/"
           >
             <svg
@@ -86,7 +91,7 @@ export default function Dashboard() {
             <span className="font-semibold"></span>
           </Link>
           <Link
-            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-400 hover:text-gray-800"
+            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-300 hover:text-gray-800"
             to="/"
           >
             <svg
@@ -105,8 +110,8 @@ export default function Dashboard() {
             </svg>
             <span className="font-semibold"></span>
           </Link>
-          <Link
-            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-400 hover:text-gray-800"
+          <Link 
+            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-300 hover:text-gray-800"
             to="/"
           >
             <svg
@@ -126,7 +131,7 @@ export default function Dashboard() {
             <span className="font-semibold"></span>
           </Link>
           <Link
-            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-400 hover:text-gray-800"
+            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-300 hover:text-gray-800"
             to="/"
           >
             <svg
@@ -146,7 +151,7 @@ export default function Dashboard() {
             <span className="font-semibold"></span>
           </Link>
           <Link
-            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-400 hover:text-gray-800"
+            className="rounded text-white mx-1 my-2 py-2.5 px-1 flex justify-center items-center transition duration-200 hover:bg-gray-300 hover:text-gray-800"
             to="/"
           >
             <svg
@@ -167,11 +172,12 @@ export default function Dashboard() {
           </Link>
         </nav>
       </div>
+
       {/* when sidebar opened */}
       <div
         className={`${
           buttonMenu
-            ? "sidebar absolute bg-gray-600 text-gray-100 w-64 space-y-6 pt-5 px-2 inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out"
+            ? "absolute bg-gray-600 text-gray-100 w-64 space-y-6 pt-5 px-2 inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out"
             : "sidebar relative bg-gray-600 text-gray-100 w-64 space-y-6 pt-5 px-2 inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out"
         }`}
       >
@@ -226,7 +232,7 @@ export default function Dashboard() {
             </button>
           </div>
           <Link
-            className="rounded text-white my-2 py-2.5 px-4 flex justify-start items-center transition duration-200 hover:bg-gray-400 hover:text-gray-800"
+            className="rounded text-white my-2 py-2.5 px-4 flex justify-start items-center transition duration-200 hover:bg-gray-300 hover:text-gray-800"
             to="/"
           >
             <svg
@@ -262,7 +268,7 @@ export default function Dashboard() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
                 />
               </svg>
               <span className="font-semibold">Management</span>
@@ -496,7 +502,7 @@ export default function Dashboard() {
               <button class="relative flex py-1 px-4 hover:text-white text-gray-800 rounded">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-9 w-9"
+                  class="h-8 w-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -508,8 +514,8 @@ export default function Dashboard() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span class="absolute -right-0 -top-0 bg-gray-500 px-2 py-1 ml-2 rounded text-xs font-bold">
-                  0
+                <span class="absolute right-1 -top-0 bg-gray-500 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
+                  10
                 </span>
               </button>
             </div>
@@ -517,7 +523,7 @@ export default function Dashboard() {
               <button class="relative mr-8 flex py-1 px-4 hover:text-white text-gray-800 rounded">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-9 w-9"
+                  class="h-8 w-8"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -529,8 +535,8 @@ export default function Dashboard() {
                     d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                   />
                 </svg>
-                <span class="absolute right-1 -top-0 bg-gray-500 px-2 py-1 ml-2 rounded text-xs font-bold">
-                  0
+                <span class="absolute right-2 -top-0 bg-gray-500 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
+                  10
                 </span>
               </button>
             </div>
