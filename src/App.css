@@ -41,3 +41,24 @@
   -webkit-box-shadow: -3px 1px 14px 6px rgba(0, 0, 0, 0.77);
   box-shadow: -3px 1px 14px 6px rgba(0, 0, 0, 0.77);
 }
+
+.chart {
+  -webkit-box-shadow: 0px 0px 16px 0px #000000;
+  box-shadow: 0px 0px 16px 0px #000000;
+}
+
+.content-top-navbar {
+  border-bottom-width: 1px;
+  border-color: #374151;
+}
+
+.user-login {
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-color: #E5E7EB;
+}
+
+.button-collapse {
+  border-width: 1px;
+  border-color: #E5E7EB;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ClosedSidebar } from "../components";
+import { ClosedSidebar, BarChart, LineChart, PieChart } from "../components";
 
 export default function Dashboard() {
   const [buttonMenu, setButtonMenu] = useState(false);
@@ -11,7 +11,7 @@ export default function Dashboard() {
     <div className="bg-gray-200 relative overflow-auto min-h-screen flex">
       {/* sidebar */}
       {/* when sidebar closed  */}
-      <ClosedSidebar buttonMenu={buttonMenu} setButtonMenu={setButtonMenu}/>
+      <ClosedSidebar buttonMenu={buttonMenu} setButtonMenu={setButtonMenu} />
 
       {/* when sidebar opened */}
       <div
@@ -40,7 +40,7 @@ export default function Dashboard() {
           </span>
         </Link>
         {/* User Login */}
-        <div className="text-white py-2 border-t border-b border-gray-200 flex justify-center">
+        <div className="user-login text-white py-2 border-t border-b border-gray-200 flex justify-center">
           <button class="btn btn-sm h-12 flex justify-center items-center">
             <img
               className="mr-4 w-10 h-10 bg-gray-300 rounded-full flex-shrink-0 border-2 border-gray-50"
@@ -91,10 +91,8 @@ export default function Dashboard() {
             </svg>
             <span className="font-semibold">Dashboard</span>
           </Link>
-          
-          
           {/* button collapse  */}
-          <div class="collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
+          <div class="button-collapse collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
             <input type="checkbox"></input>
             <div class="collapse-title text-base font-medium flex justify-start items-center">
               <svg
@@ -148,7 +146,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div class="collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
+          <div class="button-collapse collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
             <input type="checkbox"></input>
             <div class="collapse-title text-base font-medium flex justify-start items-center">
               <svg
@@ -202,7 +200,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div class="collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
+          <div class="button-collapse collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
             <input type="checkbox"></input>
             <div class="collapse-title text-base font-medium flex justify-start items-center">
               <svg
@@ -255,8 +253,8 @@ export default function Dashboard() {
               </Link>
             </div>
           </div>
-          
-          <div class="collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
+
+          <div class="button-collapse collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
             <input type="checkbox"></input>
             <div class="collapse-title text-base font-medium flex justify-start items-center">
               <svg
@@ -314,7 +312,7 @@ export default function Dashboard() {
 
       {/* content */}
       <div className="flex-1 font-bold bg-gray-200">
-        <div className="h-12 bg-blue-400 grid grid-cols-10 text-white flex justify-start items-center border-b-2 border-black shadow-lg">
+        <div className="content-top-navbar h-12 bg-blue-400 grid grid-cols-10 text-white flex justify-start items-center border-b-2 border-black shadow-lg">
           <div className="col-span-5">
             <button
               onClick={() => setButtonMenu(!buttonMenu)}
@@ -339,7 +337,7 @@ export default function Dashboard() {
 
           <div className="col-span-5 w-45 flex justify-end items-center">
             <div class="flex flex-col justify-center items-center">
-              <button class="relative flex py-1 px-4 hover:text-white text-gray-800 rounded">
+              <button class="relative flex py-1 px-4 hover:text-white text-gray-700 rounded">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8"
@@ -354,13 +352,13 @@ export default function Dashboard() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span class="absolute right-1 -top-0 bg-gray-500 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
+                <span class="absolute right-1 -top-0 bg-gray-400 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
                   10
                 </span>
               </button>
             </div>
             <div class="flex flex-col justify-center items-center">
-              <button class="relative mr-8 flex py-1 px-4 hover:text-white text-gray-800 rounded">
+              <button class="relative mr-8 flex py-1 px-4 hover:text-white text-gray-700 rounded">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8"
@@ -375,7 +373,7 @@ export default function Dashboard() {
                     d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                   />
                 </svg>
-                <span class="absolute right-2 -top-0 bg-gray-500 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
+                <span class="absolute right-2 -top-0 bg-gray-400 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
                   10
                 </span>
               </button>
@@ -398,8 +396,10 @@ export default function Dashboard() {
             </button>
           </div>
         </div>
-        <div className="w-full">
-          
+        <div className="w-full flex flex-row flex-wrap justify-evenly items-center">
+          <BarChart buttonMenu={buttonMenu} />
+          <PieChart buttonMenu={buttonMenu} />
+          <LineChart />
         </div>
       </div>
     </div>

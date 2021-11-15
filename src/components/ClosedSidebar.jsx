@@ -10,7 +10,7 @@ export default function ClosedSidebar({ buttonMenu, setButtonMenu }) {
             ? "sidebar relative inset-y-0 left-0 transform translate-x-0 transtition duration-200 ease-in-out bg-gray-600 text-gray-100 w-14 space-y-6 pt-5"
             : "sidebar absolute inset-y-0 left-0 transform -translate-x-full transtition duration-200 ease-in-out bg-gray-600 text-gray-100 w-14 space-y-6 pt-5"
         }`}
-        onClick={() => setButtonMenu(!buttonMenu)}
+        
       >
         {/* Logo  */}
         <Link
@@ -33,8 +33,7 @@ export default function ClosedSidebar({ buttonMenu, setButtonMenu }) {
           <span className="text-2xl flex justify-center items-center font-extrabold"></span>
         </Link>
         {/* User Login */}
-
-        <div className="text-white py-2 border-t border-b border-gray-200 flex justify-center">
+        <div className="user-login text-white py-2 border-t border-b border-gray-200 flex justify-center">
           <button
             class="btn btn-sm h-12 flex justify-center items-center"
             onClick={() => setButtonMenu(!buttonMenu)}
