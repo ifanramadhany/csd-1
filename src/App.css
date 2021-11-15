@@ -47,18 +47,3 @@
   box-shadow: 0px 0px 16px 0px #000000;
 }
 
-.content-top-navbar {
-  border-bottom-width: 1px;
-  border-color: #374151;
-}
-
-.user-login {
-  border-bottom-width: 1px;
-  border-top-width: 1px;
-  border-color: #E5E7EB;
-}
-
-.button-collapse {
-  border-width: 1px;
-  border-color: #E5E7EB;
-}

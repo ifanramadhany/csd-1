@@ -33,7 +33,7 @@ export default function ClosedSidebar({ buttonMenu, setButtonMenu }) {
           <span className="text-2xl flex justify-center items-center font-extrabold"></span>
         </Link>
         {/* User Login */}
-        <div className="user-login text-white py-2 border-t border-b border-gray-200 flex justify-center">
+        <div className="text-white py-2 border-t border-b border-gray-200 flex justify-center">
           <button
             class="btn btn-sm h-12 flex justify-center items-center"
             onClick={() => setButtonMenu(!buttonMenu)}

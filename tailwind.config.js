@@ -3,12 +3,19 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     borderWidth: {
-      '14': '14px'
+      DEFAULT: "1px",
+      0: "0",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
+      14: "14px",
     },
     extend: {
       width: {
-        '100': '35.3rem',
-      }
+        100: "35.3rem",
+      },
     },
   },
   variants: {

@@ -1,19 +1,10 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
-import { ClosedSidebar, BarChart, LineChart, PieChart } from "../components";
+import { ClosedSidebar } from "../components";
 
-const currencies = [
-  { name: "IDR" },
-  { name: "USD" },
-  { name: "EUR" },
-];
-
-export default function Dashboard() {
+export default function MngCurrencyPage() {
   const [buttonMenu, setButtonMenu] = useState(false);
   // console.log(buttonMenu);
-  const [selected, setSelected] = useState(currencies[0]);
 
   return (
     <div className="bg-gray-200 relative overflow-auto min-h-screen flex">
@@ -80,7 +71,7 @@ export default function Dashboard() {
             </button>
           </div>
           <Link
-            className="rounded text-white my-2 py-2.5 px-4 flex justify-start items-center transition duration-200 bg-blue-400 text-gray-100 hover:bg-gray-300 hover:text-gray-800"
+            className="rounded text-white my-2 py-2.5 px-4 flex justify-start items-center transition duration-200 hover:bg-gray-300 hover:text-gray-800"
             to="/"
           >
             <svg
@@ -100,7 +91,7 @@ export default function Dashboard() {
             <span className="font-semibold">Dashboard</span>
           </Link>
           {/* button collapse  */}
-          <div class="collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow hover:bg-gray-200 hover:text-gray-700">
+          <div class="collapse my-3 w-50 border rounded-box border-base-300 collapse-arrow collapse-open hover:bg-gray-200 hover:text-gray-700">
             <input type="checkbox"></input>
             <div class="collapse-title text-base font-medium flex justify-start items-center">
               <svg
@@ -122,7 +113,7 @@ export default function Dashboard() {
             <div class="collapse-content">
               {/* children buttons  */}
               <Link
-                className="rounded text-gray-800 ml-6 my-1 py-2 px-4 flex justify-start items-center transition duration-200 bg-gray-400 hover:bg-blue-400 hover:text-gray-100"
+                className="rounded ml-6 my-1 py-2 px-4 flex justify-start items-center transition duration-200 bg-blue-400 text-gray-100 hover:bg-blue-400 hover:text-gray-100"
                 to="/management/currency"
               >
                 <svg
@@ -406,72 +397,25 @@ export default function Dashboard() {
         </div>
         <div className="w-full flex flex-row flex-wrap justify-evenly items-center">
           <div className="w-full flex items-center mt-4 ">
-            <span className="ml-8 text-xl font-bold">TMS Dashboard</span>
-            <Listbox value={selected} onChange={setSelected}>
-              <div className="relative mt-1">
-                <Listbox.Button className="relative ml-8 w-40 py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
-                  <span className="block truncate">{selected.name}</span>
-                  <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                    <SelectorIcon
-                      className="w-5 h-5 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </Listbox.Button>
-                <Transition
-                  as={Fragment}
-                  leave="transition ease-in duration-100"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
-                >
-                  <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                    {currencies.map((currency, index) => (
-                      <Listbox.Option
-                        key={index}
-                        className={({ active }) =>
-                          `${
-                            active
-                              ? "text-blue-900 bg-blue-100"
-                              : "text-gray-900"
-                          }
-                          cursor-default select-none relative py-2 pl-10 pr-4`
-                        }
-                        value={currency}
-                      >
-                        {({ selected, active }) => (
-                          <>
-                            <span
-                              className={`${
-                                selected ? "font-medium" : "font-normal"
-                              } block truncate`}
-                            >
-                              {currency.name}
-                            </span>
-                            {selected ? (
-                              <span
-                                className={`${
-                                  active ? "text-blue-600" : "text-blue-600"
-                                }
-                                absolute inset-y-0 left-0 flex items-center pl-3`}
-                              >
-                                <CheckIcon
-                                  className="w-5 h-5"
-                                  aria-hidden="true"
-                                />
-                              </span>
-                            ) : null}
-                          </>
-                        )}
-                      </Listbox.Option>
-                    ))}
-                  </Listbox.Options>
-                </Transition>
-              </div>
-            </Listbox>
+            <span className="ml-8 text-xl font-bold">Currency Management</span>
+            <button className="btn btn-sm ml-8">
+              Register New Currency
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-4 h-4 ml-2 stroke-current"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
           </div>
-          <BarChart buttonMenu={buttonMenu} />
-          <PieChart buttonMenu={buttonMenu} />
-          <LineChart />
+          <span>Management Currency Page</span>
         </div>
       </div>
     </div>
