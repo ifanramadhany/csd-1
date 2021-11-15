@@ -41,3 +41,9 @@
   -webkit-box-shadow: -3px 1px 14px 6px rgba(0, 0, 0, 0.77);
   box-shadow: -3px 1px 14px 6px rgba(0, 0, 0, 0.77);
 }
+
+.chart {
+  -webkit-box-shadow: 0px 0px 16px 0px #000000;
+  box-shadow: 0px 0px 16px 0px #000000;
+}
+
