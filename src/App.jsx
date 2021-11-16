@@ -11,6 +11,9 @@ function App() {
         <Route exact path="/">
           <Dashboard />
         </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
         <Route path="/management/currency">
           <MngCurrency />
         </Route>
