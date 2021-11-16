@@ -138,7 +138,8 @@ export default function Dashboard() {
               </Link>
               <Link
                 className="rounded text-gray-800 ml-6 my-1 py-2 px-4 flex justify-start items-center transition duration-200 bg-gray-400 hover:bg-blue-400 hover:text-gray-100"
-                to="/management/denomination"
+                to="/management/denomination
+                "
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -360,7 +361,7 @@ export default function Dashboard() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span class="absolute right-1 -top-0 bg-gray-400 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
+                <span class="absolute right-0.5 -top-0 bg-gray-400 px-1.5 py-0.5 ml-2 rounded-full border border-blue-200 text-xs font-bold">
                   10
                 </span>
               </button>
@@ -381,7 +382,7 @@ export default function Dashboard() {
                     d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                   />
                 </svg>
-                <span class="absolute right-2 -top-0 bg-gray-400 px-1.5 py-0.5 ml-2 rounded text-xs font-bold">
+                <span class="absolute right-1 -top-0 bg-gray-400 px-1.5 py-0.5 ml-2 rounded-full border border-blue-200 text-xs font-bold">
                   10
                 </span>
               </button>
